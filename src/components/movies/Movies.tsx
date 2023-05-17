@@ -3,6 +3,7 @@ import { Container, NotFoundWrapper } from './Movies.style'
 import { type MoviesProps } from './types'
 import dictionary from 'utils/dictionary'
 import { memo } from 'react'
+import { handleDeepComparison } from 'utils/helpers'
 
 const MovieList = ({ movies }: MoviesProps) => {
   const {
@@ -25,13 +26,7 @@ const MovieList = ({ movies }: MoviesProps) => {
 }
 
 const areEqual = (prevProp: MoviesProps, nextProp: MoviesProps) => {
-  const prevMovies = prevProp.movies
-  const nextMovies = nextProp.movies
-
-  if (JSON.stringify(prevMovies) === JSON.stringify(nextMovies)) {
-    return true
-  }
-  return false
+  return handleDeepComparison(prevProp.movies, nextProp.movies)
 }
 
 export default memo(MovieList, areEqual)

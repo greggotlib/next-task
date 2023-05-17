@@ -12,6 +12,7 @@ import {
 import { FaTimes } from 'react-icons/fa'
 import { type Movie } from 'components/movies/movie/types'
 import useDebounce from 'hooks/useDebounce'
+import { handleDeepComparison } from 'utils/helpers'
 
 const SearchBar = ({
   movies,
@@ -91,13 +92,7 @@ const SearchBar = ({
 }
 
 const areEqual = (prevProp: SearchBarProps, nextProp: SearchBarProps) => {
-  const prevMovies = prevProp.movies
-  const nextMovies = nextProp.movies
-
-  if (JSON.stringify(prevMovies) === JSON.stringify(nextMovies)) {
-    return true
-  }
-  return false
+  return handleDeepComparison(prevProp.movies, nextProp.movies)
 }
 
 export default memo(SearchBar, areEqual)

@@ -14,7 +14,7 @@ export const ModalOverlay = styled.div`
 
 export const ModalContent = styled.div`
   display: flex;
-  padding: 49px 149px 50px;
+  padding: 49px 139px 50px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   background: #ffffff 0% 0% no-repeat padding-box;
@@ -75,6 +75,7 @@ export const Duration = styled.div`
   margin-bottom: 24px;
   @media (max-width: 768px) {
     font: normal normal normal 20px/31px Arial;
+    margin-bottom: 12px;
   }
 `
 
@@ -95,6 +96,10 @@ export const RatingContainer = styled.div`
   display: flex;
   align-items: center;
   margin-block-end: 28px;
+  @media (max-width: 768px) {
+    font: normal normal normal 18px/19px Arial;
+    margin-block-end: 22px;
+  }
 `
 
 export const Description = styled.div`

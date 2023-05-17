@@ -6,6 +6,7 @@ const serverUrl = 'http://localhost:8000'
 export const fetchMovies = async (): Promise<Movie[]> => {
   try {
     const response = await axios.get(`${serverUrl}/movies`)
+    fetchMovie('207856')
     if (response.status !== 200) {
       throw new Error(
         `Failed to fetch movies, the server return with the status of ${response.status}`
@@ -14,5 +15,19 @@ export const fetchMovies = async (): Promise<Movie[]> => {
     return response.data
   } catch (error) {
     throw new Error('Failed to fetch movies')
+  }
+}
+
+export const fetchMovie = async (id: string): Promise<Movie[]> => {
+  try {
+    const response = await axios.get(`${serverUrl}/movies/${id}`)
+    if (response.status !== 200) {
+      throw new Error(
+        `Failed to fetch movie, the server return with the status of ${response.status}`
+      )
+    }
+    return response.data
+  } catch (error) {
+    throw new Error('Failed to fetch movie')
   }
 }

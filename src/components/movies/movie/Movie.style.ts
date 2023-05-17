@@ -3,18 +3,19 @@ import styled from 'styled-components'
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  margin: 15px 15px 94px;
   width: 251px;
   text-align: center;
   justify-content: space-between;
+  @media (max-width: 768px) {
+    15px 15px 55px
+  }
 `
 
 export const DetailsContianer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 10px;
-  width: 251px;
-  text-align: center;
+  margin-block-end: 18px;
 `
 
 export const Cover = styled.img`

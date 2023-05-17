@@ -8,4 +8,5 @@ export const Container = styled.div`
 
 export const NotFoundWrapper = styled.div`
   font-size: 25px;
+  margin-block-end: 30px;
 `

@@ -15,11 +15,13 @@ export const SocialIconsContainer = styled.div`
 `
 
 export const SocialIcon = styled.a`
-  margin-right: 10px;
   transition: color 0.2s;
   color: #ffffff;
   &:hover {
     color: #e7e7e7;
+  }
+  &:not(:last-child) {
+    margin-right: 32px;
   }
   background: transparent;
 `
