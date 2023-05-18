@@ -14,7 +14,7 @@ export const ModalOverlay = styled.div`
 
 export const ModalContent = styled.div`
   display: flex;
-  padding: 49px 139px 50px;
+  padding: 49px 134px 50px 139px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   background: #ffffff 0% 0% no-repeat padding-box;
@@ -25,7 +25,7 @@ export const ModalContent = styled.div`
   @media (max-width: 768px) {
     /* Change flex-direction to column for mobile screens */
     flex-direction: column;
-    width: 294px;
+    width: 253px;
     height: fit-content;
     padding: 18px 19px;
   }
@@ -59,10 +59,11 @@ export const Title = styled.div`
   color: #000000;
   text-transform: uppercase;
   opacity: 1;
-  margin-bottom: 10px;
+  margin-block-end: 10px;
   line-height: 45px;
   @media (max-width: 768px) {
     font: normal normal bold 30px/31px Arial;
+    margin-block-end: 7px;
   }
 `
 
@@ -72,10 +73,10 @@ export const Duration = styled.div`
   letter-spacing: -0.5px;
   color: #000000;
   text-transform: lowercase;
-  margin-bottom: 24px;
+  margin-block-end: 24px;
   @media (max-width: 768px) {
     font: normal normal normal 20px/31px Arial;
-    margin-bottom: 12px;
+    margin-block-end: 12px;
   }
 `
 
@@ -94,7 +95,7 @@ export const Rating = styled.div`
 
 export const RatingContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   margin-block-end: 28px;
   @media (max-width: 768px) {
     font: normal normal normal 18px/19px Arial;
@@ -126,7 +127,12 @@ export const MovideDetailsContainer = styled.div`
   }
 `
 
-export const RatingIcon = styled.img``
+export const RatingIcon = styled.img`
+  @media (max-width: 768px) {
+    width: 23px;
+    height: 22px;
+  }
+`
 
 export const BackToListIcon = styled.img``
 

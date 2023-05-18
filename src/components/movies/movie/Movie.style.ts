@@ -8,7 +8,8 @@ export const Container = styled.div`
   text-align: center;
   justify-content: space-between;
   @media (max-width: 768px) {
-    15px 15px 55px
+    margin: 15px 15px 55px;
+    width: 144px;
   }
 `
 
@@ -20,6 +21,10 @@ export const DetailsContianer = styled.div`
 
 export const Cover = styled.img`
   border-radius: 5px;
+  @media (max-width: 768px) {
+    height: 214px;
+    width: 143px;
+  }
 `
 
 export const Title = styled.div`
@@ -30,6 +35,10 @@ export const Title = styled.div`
   text-transform: capitalize;
   opacity: 1;
   margin-block-start: 20px;
+  @media (max-width: 768px) {
+    font: normal normal normal 20px/21px Georgia;
+    letter-spacing: -0.4px;
+  }
 `
 
 export const Wrapper = styled.div`
@@ -63,6 +72,10 @@ export const Rating = styled.div`
   text-transform: capitalize;
   opacity: 1;
   margin-inline-start: 6px;
+  @media (max-width: 768px) {
+    font: normal normal normal 20px/25px Arial;
+    letter-spacing: -0.4px;
+  }
 `
 
 export const ButtonTitle = styled.div``
@@ -70,6 +83,11 @@ export const ContentContainer = styled.div``
 
 export const RatingContainer = styled.div``
 
-export const Icon = styled.img``
+export const Icon = styled.img`
+  @media (max-width: 768px) {
+    width: 23px;
+    height: 23px;
+  }
+`
 
 export const ReadMoreIcon = styled.img``

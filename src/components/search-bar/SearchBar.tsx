@@ -2,12 +2,13 @@ import React, { memo, useEffect, useState } from 'react'
 import { type SearchBarProps, SearchCritiria } from './types'
 import {
   DeleteIcon,
-  Container,
   SearchInput,
   RadioGroup,
   RadioButtonInput,
   RadioButtonLabel,
   CritiriaContainer,
+  Wrapper,
+  SearchContainer,
 } from './SearchBar.style'
 import { FaTimes } from 'react-icons/fa'
 import { type Movie } from 'components/movies/movie/types'
@@ -58,20 +59,22 @@ const SearchBar = ({
   }
 
   return (
-    <Container>
-      <SearchInput
-        placeholder={placeholder}
-        onChange={handleSearch}
-        value={searchText}
-      />
-      {searchText && (
-        <DeleteIcon
-          data-testid="clear-search"
-          onClick={handleClearSearch}
-        >
-          <FaTimes />
-        </DeleteIcon>
-      )}
+    <Wrapper>
+      <SearchContainer>
+        <SearchInput
+          placeholder={placeholder}
+          onChange={handleSearch}
+          value={searchText}
+        />
+        {searchText && (
+          <DeleteIcon
+            data-testid="clear-search"
+            onClick={handleClearSearch}
+          >
+            <FaTimes />
+          </DeleteIcon>
+        )}
+      </SearchContainer>
       <CritiriaContainer>
         <RadioGroup>
           {Object.keys(SearchCritiria).map((key) => (
@@ -87,7 +90,7 @@ const SearchBar = ({
           ))}
         </RadioGroup>
       </CritiriaContainer>
-    </Container>
+    </Wrapper>
   )
 }
 

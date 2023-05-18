@@ -1,6 +1,11 @@
 import { Movies } from 'components/movies'
 import dictionary from '../../utils/dictionary'
-import { Container, SearchBarContainer, Title } from './Dashboard.style'
+import {
+  Container,
+  SearchBarContainer,
+  SpinnerContainer,
+  Title,
+} from './Dashboard.style'
 import { SearchBar } from 'components/search-bar'
 import { fetchMovies } from 'api/moviesApi'
 import { useState, useEffect } from 'react'
@@ -35,7 +40,13 @@ const Dashboard = () => {
           placeholder={placeholder}
         />
       </SearchBarContainer>
-      {movies.length ? <Movies movies={searchedMovies} /> : <Spinner />}
+      {movies.length ? (
+        <Movies movies={searchedMovies} />
+      ) : (
+        <SpinnerContainer>
+          <Spinner />
+        </SpinnerContainer>
+      )}
     </Container>
   )
 }

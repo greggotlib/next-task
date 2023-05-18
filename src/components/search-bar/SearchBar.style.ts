@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   background-color: #fff;
@@ -9,6 +9,9 @@ export const Container = styled.div`
   padding: 10px;
   margin-block-end: 20px;
   width: 600px;
+  @media (max-width: 768px) {
+    width: 300px;
+  }
 `
 
 export const SearchInput = styled.input`
@@ -32,7 +35,7 @@ export const DeleteIcon = styled.i`
 
 export const RadioGroup = styled.div`
   display: flex;
-  padding: 5px;
+  justify-content: center;
 `
 
 export const RadioButtonLabel = styled.div`
@@ -47,6 +50,13 @@ export const RadioButtonInput = styled.input`
 `
 
 export const CritiriaContainer = styled.div`
-  border-radius: 5px;
   background-color: aliceblue;
+  border-radius: 10px;
+  padding: 10px;
+  align-self: center;
+`
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
 `

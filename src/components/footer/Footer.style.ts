@@ -8,6 +8,7 @@ export const FooterContainer = styled.footer`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding: 41px 0 47px;
 `
 
 export const SocialIconsContainer = styled.div`
@@ -21,7 +22,7 @@ export const SocialIcon = styled.a`
     color: #e7e7e7;
   }
   &:not(:last-child) {
-    margin-right: 32px;
+    margin-inline-end: 32px;
   }
   background: transparent;
 `
